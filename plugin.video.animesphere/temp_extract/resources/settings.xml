@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings version="1">
+    <section id="plugin.video.animesphere">
+        <category label="32000" help="API Settings">
+            <setting id="mal_client_id" type="string" label="32001" default="">
+                <level>0</level>
+                <constraints>
+                    <allowempty>false</allowempty>
+                </constraints>
+                <help>MyAnimeList API client ID</help>
+            </setting>
+            <setting id="mal_access_token" type="string" label="32002" default="">
+                <level>0</level>
+                <constraints>
+                    <allowempty>false</allowempty>
+                </constraints>
+                <help>MyAnimeList API access token</help>
+            </setting>
+            <setting id="api_debug" type="bool" label="32003" default="false">
+                <help>Enable API debug logging</help>
+            </setting>
+            <setting id="api_timeout" type="number" label="32004" default="30" min="5" max="120">
+                <help>API request timeout in seconds</help>
+            </setting>
+            <setting id="api_retries" type="number" label="32005" default="3" min="1" max="5">
+                <help>Number of retries for failed API requests</help>
+            </setting>
+        </category>
+        <category label="32010" help="Watchlist Settings">
+            <setting id="watchlist_sort" type="enum" label="32011" default="0">
+                <help>Sort order for watchlist items</help>
+                <constraints>
+                    <options>
+                        <option label="Title">0</option>
+                        <option label="Score">1</option>
+                        <option label="Progress">2</option>
+                        <option label="Date Added">3</option>
+                        <option label="Date Updated">4</option>
+                        <option label="Episode Count">5</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="watchlist_order" type="enum" label="32012" default="0">
+                <help>Sort direction for watchlist items</help>
+                <constraints>
+                    <options>
+                        <option label="Ascending">0</option>
+                        <option label="Descending">1</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="show_progress" type="bool" label="32013" default="true">
+                <help>Show progress bars in watchlist</help>
+            </setting>
+            <setting id="reminder_enabled" type="bool" label="32014" default="true">
+                <help>Enable episode reminder notifications</help>
+            </setting>
+            <setting id="watchlist_limit" type="number" label="32015" default="100" min="10" max="1000">
+                <help>Maximum number of items to show in watchlist</help>
+            </setting>
+            <setting id="watchlist_refresh" type="enum" label="32016" default="60">
+                <help>Watchlist refresh interval in minutes</help>
+                <constraints>
+                    <options>
+                        <option label="Never">0</option>
+                        <option label="15 minutes">15</option>
+                        <option label="30 minutes">30</option>
+                        <option label="1 hour">60</option>
+                        <option label="2 hours">120</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="watchlist_group_by" type="enum" label="32017" default="0">
+                <help>Group watchlist items by category</help>
+                <constraints>
+                    <options>
+                        <option label="None">0</option>
+                        <option label="Status">1</option>
+                        <option label="Genre">2</option>
+                        <option label="Year">3</option>
+                        <option label="Season">4</option>
+                    </options>
+                </constraints>
+            </setting>
+        </category>
+        <category label="32020" help="Sync Settings">
+            <setting id="sync_trakt" type="bool" label="32021" default="false">
+                <help>Enable Trakt.tv synchronization</help>
+            </setting>
+            <setting id="sync_anilist" type="bool" label="32022" default="false">
+                <help>Enable AniList synchronization</help>
+            </setting>
+            <setting id="sync_kitsu" type="bool" label="32023" default="false">
+                <help>Enable Kitsu synchronization</help>
+            </setting>
+            <setting id="sync_shikimori" type="bool" label="32024" default="false">
+                <help>Enable Shikimori synchronization</help>
+            </setting>
+            <setting id="sync_anidb" type="bool" label="32025" default="false">
+                <help>Enable AniDB synchronization</help>
+            </setting>
+            <setting id="sync_interval" type="enum" label="32026" default="60">
+                <help>Sync interval in minutes</help>
+                <constraints>
+                    <options>
+                        <option label="Never">0</option>
+                        <option label="15 minutes">15</option>
+                        <option label="30 minutes">30</option>
+                        <option label="1 hour">60</option>
+                        <option label="2 hours">120</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="sync_priority" type="enum" label="32027" default="0">
+                <help>Sync priority order</help>
+                <constraints>
+                    <options>
+                        <option label="MAL First">0</option>
+                        <option label="Trakt First">1</option>
+                        <option label="AniList First">2</option>
+                        <option label="Kitsu First">3</option>
+                        <option label="Shikimori First">4</option>
+                        <option label="AniDB First">5</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="sync_conflict" type="enum" label="32028" default="0">
+                <help>Conflict resolution strategy</help>
+                <constraints>
+                    <options>
+                        <option label="Keep MAL">0</option>
+                        <option label="Update MAL">1</option>
+                        <option label="Ask Each Time">2</option>
+                    </options>
+                </constraints>
+            </setting>
+        </category>
+        <category label="32030" help="Recommendation Settings">
+            <setting id="recommendation_type" type="enum" label="32031" default="0">
+                <help>Type of recommendations to show</help>
+                <constraints>
+                    <options>
+                        <option label="Personalized">0</option>
+                        <option label="Trending">1</option>
+                        <option label="Seasonal">2</option>
+                        <option label="Random">3</option>
+                        <option label="Popular">4</option>
+                        <option label="Upcoming">5</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="max_recommendations" type="number" label="32032" default="10" min="1" max="50">
+                <help>Maximum number of recommendations to show</help>
+            </setting>
+            <setting id="include_genres" type="text" label="32033" default="">
+                <help>Comma-separated list of genres to include</help>
+            </setting>
+            <setting id="exclude_genres" type="text" label="32034" default="">
+                <help>Comma-separated list of genres to exclude</help>
+            </setting>
+            <setting id="min_score" type="number" label="32035" default="7.5" min="0" max="10" step="0.1">
+                <help>Minimum score for recommendations</help>
+            </setting>
+            <setting id="max_age" type="number" label="32036" default="5" min="0" max="100">
+                <help>Maximum age of recommendations in years</help>
+            </setting>
+            <setting id="recommendation_refresh" type="enum" label="32037" default="24">
+                <help>Recommendation refresh interval in hours</help>
+                <constraints>
+                    <options>
+                        <option label="Never">0</option>
+                        <option label="1 hour">1</option>
+                        <option label="6 hours">6</option>
+                        <option label="12 hours">12</option>
+                        <option label="24 hours">24</option>
+                    </options>
+                </constraints>
+            </setting>
+        </category>
+        <category label="32040" help="Notification Settings">
+            <setting id="notify_new_episodes" type="bool" label="32041" default="true">
+                <help>Notify about new episodes</help>
+            </setting>
+            <setting id="notify_watchlist_updates" type="bool" label="32042" default="true">
+                <help>Notify about watchlist updates</help>
+            </setting>
+            <setting id="notify_recommendations" type="bool" label="32043" default="true">
+                <help>Notify about new recommendations</help>
+            </setting>
+            <setting id="notify_reminders" type="bool" label="32044" default="true">
+                <help>Notify about episode reminders</help>
+            </setting>
+            <setting id="notification_duration" type="number" label="32045" default="5" min="1" max="30">
+                <help>Notification display duration in seconds</help>
+            </setting>
+            <setting id="notification_sound" type="bool" label="32046" default="true">
+                <help>Play sound with notifications</help>
+            </setting>
+            <setting id="notification_sound_path" type="file" label="32047" default="">
+                <help>Path to custom notification sound</help>
+            </setting>
+            <setting id="notification_position" type="enum" label="32048" default="0">
+                <help>Notification position on screen</help>
+                <constraints>
+                    <options>
+                        <option label="Top">0</option>
+                        <option label="Bottom">1</option>
+                        <option label="Center">2</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="notification_style" type="enum" label="32049" default="0">
+                <help>Notification style</help>
+                <constraints>
+                    <options>
+                        <option label="Standard">0</option>
+                        <option label="Minimal">1</option>
+                        <option label="Detailed">2</option>
+                    </options>
+                </constraints>
+            </setting>
+        </category>
+        <category label="32050" help="Player Settings">
+            <setting id="player_type" type="enum" label="32051" default="0">
+                <help>Default player type</help>
+                <constraints>
+                    <options>
+                        <option label="Default">0</option>
+                        <option label="External">1</option>
+                        <option label="Stream">2</option>
+                        <option label="Custom">3</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="external_player_path" type="file" label="32052" default="" visible="eq(-1,1)">
+                <help>Path to external player executable</help>
+            </setting>
+            <setting id="external_player_args" type="text" label="32053" default="" visible="eq(-1,1)">
+                <help>Arguments for external player</help>
+            </setting>
+            <setting id="stream_quality" type="enum" label="32054" default="0">
+                <help>Default stream quality</help>
+                <constraints>
+                    <options>
+                        <option label="Auto">0</option>
+                        <option label="1080p">1</option>
+                        <option label="720p">2</option>
+                        <option label="480p">3</option>
+                        <option label="360p">4</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="stream_protocol" type="enum" label="32055" default="0">
+                <help>Default stream protocol</help>
+                <constraints>
+                    <options>
+                        <option label="HLS">0</option>
+                        <option label="DASH">1</option>
+                        <option label="RTMP">2</option>
+                        <option label="HTTP">3</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="buffer_size" type="number" label="32056" default="5" min="1" max="30">
+                <help>Stream buffer size in seconds</help>
+            </setting>
+            <setting id="subtitle_language" type="enum" label="32057" default="0">
+                <help>Default subtitle language</help>
+                <constraints>
+                    <options>
+                        <option label="None">0</option>
+                        <option label="English">1</option>
+                        <option label="Japanese">2</option>
+                        <option label="System Language">3</option>
+                    </options>
+                </constraints>
+            </setting>
+        </category>
+        <category label="32060" help="Theme Settings">
+            <setting id="theme" type="enum" label="32061" default="0">
+                <help>UI theme</help>
+                <constraints>
+                    <options>
+                        <option label="Default">0</option>
+                        <option label="Dark">1</option>
+                        <option label="Light">2</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="font_size" type="enum" label="32062" default="0">
+                <help>Font size</help>
+                <constraints>
+                    <options>
+                        <option label="Small">0</option>
+                        <option label="Medium">1</option>
+                        <option label="Large">2</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="icon_set" type="enum" label="32063" default="0">
+                <help>Icon set</help>
+                <constraints>
+                    <options>
+                        <option label="Default">0</option>
+                        <option label="Modern">1</option>
+                        <option label="Classic">2</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="background_image" type="file" label="32064" default="">
+                <help>Custom background image</help>
+            </setting>
+            <setting id="background_opacity" type="number" label="32065" default="100" min="0" max="100">
+                <help>Background opacity percentage</help>
+            </setting>
+        </category>
+        <category label="32070" help="Widget Settings">
+            <setting id="widget_enabled" type="bool" label="32071" default="true">
+                <help>Enable widget display</help>
+            </setting>
+            <setting id="widget_type" type="enum" label="32072" default="0">
+                <help>Widget type</help>
+                <constraints>
+                    <options>
+                        <option label="Watchlist">0</option>
+                        <option label="Recommendations">1</option>
+                        <option label="Trending">2</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="widget_limit" type="number" label="32073" default="10" min="1" max="50">
+                <help>Number of items to show in widget</help>
+            </setting>
+            <setting id="widget_refresh" type="enum" label="32074" default="0">
+                <help>Widget refresh interval in hours</help>
+                <constraints>
+                    <options>
+                        <option label="1 hour">0</option>
+                        <option label="3 hours">1</option>
+                        <option label="6 hours">2</option>
+                        <option label="12 hours">3</option>
+                        <option label="24 hours">4</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="widget_style" type="enum" label="32075" default="0">
+                <help>Widget display style</help>
+                <constraints>
+                    <options>
+                        <option label="Standard">0</option>
+                        <option label="Minimal">1</option>
+                        <option label="Detailed">2</option>
+                    </options>
+                </constraints>
+            </setting>
+        </category>
+        <category label="32080" help="Backup Settings">
+            <setting id="backup_enabled" type="bool" label="32081" default="true">
+                <help>Enable data backup</help>
+            </setting>
+            <setting id="backup_frequency" type="enum" label="32082" default="24">
+                <help>Backup frequency in hours</help>
+                <constraints>
+                    <options>
+                        <option label="1 hour">1</option>
+                        <option label="6 hours">6</option>
+                        <option label="12 hours">12</option>
+                        <option label="24 hours">24</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="backup_location" type="folder" label="32083" default="">
+                <help>Backup storage location</help>
+            </setting>
+            <setting id="backup_retention" type="number" label="32084" default="30" min="1" max="365">
+                <help>Number of days to keep backups</help>
+            </setting>
+            <setting id="backup_encryption" type="bool" label="32085" default="true">
+                <help>Encrypt backup files</help>
+            </setting>
+        </category>
+        <category label="32090" help="Analytics Settings">
+            <setting id="analytics_enabled" type="bool" label="32091" default="true">
+                <help>Enable analytics collection</help>
+            </setting>
+            <setting id="analytics_type" type="enum" label="32092" default="0">
+                <help>Analytics collection type</help>
+                <constraints>
+                    <options>
+                        <option label="Basic">0</option>
+                        <option label="Detailed">1</option>
+                        <option label="Custom">2</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="analytics_interval" type="enum" label="32093" default="24">
+                <help>Analytics collection interval in hours</help>
+                <constraints>
+                    <options>
+                        <option label="1 hour">1</option>
+                        <option label="6 hours">6</option>
+                        <option label="12 hours">12</option>
+                        <option label="24 hours">24</option>
+                    </options>
+                </constraints>
+            </setting>
+            <setting id="analytics_anonymize" type="bool" label="32094" default="true">
+                <help>Anonymize analytics data</help>
+            </setting>
+        </category>
+        <category label="32100" help="Accessibility Settings">
+            <setting id="screen_reader" type="bool" label="32101" default="true">
+                <help>Enable screen reader support</help>
+            </setting>
+            <setting id="keyboard_navigation" type="bool" label="32102" default="true">
+                <help>Enable keyboard navigation</help>
+            </setting>
+            <setting id="high_contrast" type="bool" label="32103" default="false">
+                <help>Enable high contrast mode</help>
+            </setting>
+            <setting id="text_to_speech" type="bool" label="32104" default="false">
+                <help>Enable text-to-speech</help>
+            </setting>
+            <setting id="closed_captions" type="bool" label="32105" default="true">
+                <help>Enable closed captions</help>
+            </setting>
+        </category>
+    </section>
+</settings>
+        <category label="32010">
+            <setting id="watchlist_sort" type="enum" label="32011" default="0">
+                <option label="Title" value="0"/>
+                <option label="Score" value="1"/>
+                <option label="Progress" value="2"/>
+                <option label="Date Added" value="3"/>
+                <option label="Date Updated" value="4"/>
+                <option label="Episode Count" value="5"/>
+            </setting>
+            <setting id="watchlist_order" type="enum" label="32012" default="0">
+                <option label="Ascending" value="0"/>
+                <option label="Descending" value="1"/>
+            </setting>
+            <setting id="show_progress" type="bool" label="32013" default="true"/>
+            <setting id="reminder_enabled" type="bool" label="32014" default="true"/>
+            <setting id="watchlist_limit" type="number" label="32015" default="100" min="10" max="1000"/>
+            <setting id="watchlist_refresh" type="enum" label="32016" default="60">
+                <option label="Never" value="0"/>
+                <option label="15 minutes" value="15"/>
+                <option label="30 minutes" value="30"/>
+                <option label="1 hour" value="60"/>
+                <option label="2 hours" value="120"/>
+            </setting>
+            <setting id="watchlist_group_by" type="enum" label="32017" default="0">
+                <option label="None" value="0"/>
+                <option label="Status" value="1"/>
+                <option label="Genre" value="2"/>
+                <option label="Year" value="3"/>
+                <option label="Season" value="4"/>
+            </setting>
+        </category>
+        <category label="32020">
+            <setting id="sync_trakt" type="bool" label="32021" default="false"/>
+            <setting id="sync_anilist" type="bool" label="32022" default="false"/>
+            <setting id="sync_kitsu" type="bool" label="32023" default="false"/>
+            <setting id="sync_shikimori" type="bool" label="32024" default="false"/>
+            <setting id="sync_anidb" type="bool" label="32025" default="false"/>
+            <setting id="sync_interval" type="enum" label="32026" default="60">
+                <option label="Never" value="0"/>
+                <option label="15 minutes" value="15"/>
+                <option label="30 minutes" value="30"/>
+                <option label="1 hour" value="60"/>
+                <option label="2 hours" value="120"/>
+            </setting>
+            <setting id="sync_priority" type="enum" label="32027" default="0">
+                <option label="MAL First" value="0"/>
+                <option label="Trakt First" value="1"/>
+                <option label="AniList First" value="2"/>
+                <option label="Kitsu First" value="3"/>
+                <option label="Shikimori First" value="4"/>
+                <option label="AniDB First" value="5"/>
+            </setting>
+            <setting id="sync_conflict" type="enum" label="32028" default="0">
+                <option label="Keep MAL" value="0"/>
+                <option label="Update MAL" value="1"/>
+                <option label="Ask Each Time" value="2"/>
+            </setting>
+        </category>
+        <category label="32030">
+            <setting id="recommendation_type" type="enum" label="32031" default="0">
+                <option label="Personalized" value="0"/>
+                <option label="Trending" value="1"/>
+                <option label="Seasonal" value="2"/>
+                <option label="Random" value="3"/>
+                <option label="Popular" value="4"/>
+                <option label="Upcoming" value="5"/>
+            </setting>
+            <setting id="max_recommendations" type="number" label="32032" default="10" min="1" max="50"/>
+            <setting id="include_genres" type="text" label="32033" default=""/>
+            <setting id="exclude_genres" type="text" label="32034" default=""/>
+            <setting id="min_score" type="number" label="32035" default="7.5" min="0" max="10" step="0.1"/>
+            <setting id="max_age" type="number" label="32036" default="5" min="0" max="100"/>
+            <setting id="recommendation_refresh" type="enum" label="32037" default="24">
+                <option label="Never" value="0"/>
+                <option label="1 hour" value="1"/>
+                <option label="6 hours" value="6"/>
+                <option label="12 hours" value="12"/>
+                <option label="24 hours" value="24"/>
+            </setting>
+        </category>
+        <category label="32040">
+            <setting id="notify_new_episodes" type="bool" label="32041" default="true"/>
+            <setting id="notify_watchlist_updates" type="bool" label="32042" default="true"/>
+            <setting id="notify_recommendations" type="bool" label="32043" default="true"/>
+            <setting id="notify_reminders" type="bool" label="32044" default="true"/>
+            <setting id="notification_duration" type="number" label="32045" default="5" min="1" max="30"/>
+            <setting id="notification_sound" type="bool" label="32046" default="true"/>
+            <setting id="notification_sound_path" type="file" label="32047" default=""/>
+            <setting id="notification_position" type="enum" label="32048" default="0">
+                <option label="Top" value="0"/>
+                <option label="Bottom" value="1"/>
+                <option label="Center" value="2"/>
+            </setting>
+            <setting id="notification_style" type="enum" label="32049" default="0">
+                <option label="Standard" value="0"/>
+                <option label="Minimal" value="1"/>
+                <option label="Detailed" value="2"/>
+            <setting id="widget_refresh" type="enum" label="32022" default="0">
+                <option value="0">1 hour</option>
+                <option value="1">3 hours</option>
+                <option value="2">6 hours</option>
+                <option value="3">12 hours</option>
+                <option value="4">24 hours</option>
+            </setting>
+            
+            <!-- Notification Settings -->
+            <setting id="notifications" type="bool" label="32023" default="true"/>
+            <setting id="notification_duration" type="enum" label="32024" default="0">
+                <option value="0">2 seconds</option>
+                <option value="1">4 seconds</option>
+                <option value="2">6 seconds</option>
+                <option value="3">8 seconds</option>
+            </setting>
+            
+            <!-- Debug Settings -->
+            <setting id="debug_mode" type="bool" label="32025" default="false"/>
+            <setting id="log_level" type="enum" label="32026" default="0" visible="eq(-1,1)">
+                <option value="0">Error</option>
+                <option value="1">Warning</option>
+                <option value="2">Info</option>
+                <option value="3">Debug</option>
+            </setting>
+            <!-- Player Settings -->
+            <setting id="player_type" type="enum" label="32050" default="0">
+                <option label="Default" value="0"/>
+                <option label="External" value="1"/>
+                <option label="Stream" value="2"/>
+                <option label="Custom" value="3"/>
+            </setting>
+            <setting id="external_player_path" type="file" label="32051" default="" visible="eq(-1,1)"/>
+            <setting id="external_player_args" type="text" label="32052" default="" visible="eq(-1,1)"/>
+            <setting id="stream_quality" type="enum" label="32053" default="0">
+                <option label="Auto" value="0"/>
+                <option label="1080p" value="1"/>
+                <option label="720p" value="2"/>
+                <option label="480p" value="3"/>
+                <option label="360p" value="4"/>
+            </setting>
+            <setting id="stream_protocol" type="enum" label="32054" default="0">
+                <option label="HLS" value="0"/>
+                <option label="DASH" value="1"/>
+                <option label="RTMP" value="2"/>
+                <option label="HTTP" value="3"/>
+            </setting>
+            <setting id="buffer_size" type="number" label="32055" default="5" min="1" max="30"/>
+            <setting id="subtitle_language" type="enum" label="32056" default="0">
+                <option label="None" value="0"/>
+                <option label="English" value="1"/>
+                <option label="Japanese" value="2"/>
+                <option label="System Language" value="3"/>
+            </setting>
+        </category>
+    </section>
+</settings>

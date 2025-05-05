@@ -1,0 +1,617 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AnimeSphere\n"
+"Report-Msgid-Bugs-To: sensh@example.com\n"
+"POT-Creation-Date: 2025-05-03 21:30:42+02:00\n"
+"PO-Revision-Date: 2025-05-03 21:30:42+02:00\n"
+"Last-Translator: Sensh\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/settings.xml
+msgid "AnimeSphere"
+msgstr "AnimeSphere"
+
+#: resources/settings.xml
+msgid "API Settings"
+msgstr "API Settings"
+
+#: resources/settings.xml
+msgid "MyAnimeList Client ID"
+msgstr "MyAnimeList Client ID"
+
+#: resources/settings.xml
+msgid "MyAnimeList Access Token"
+msgstr "MyAnimeList Access Token"
+
+#: resources/settings.xml
+msgid "API Debug Mode"
+msgstr "API Debug Mode"
+
+#: resources/settings.xml
+msgid "API Timeout"
+msgstr "API Timeout"
+
+#: resources/settings.xml
+msgid "API Retries"
+msgstr "API Retries"
+
+#: resources/settings.xml
+msgid "Watchlist Settings"
+msgstr "Watchlist Settings"
+
+#: resources/settings.xml
+msgid "Sort By"
+msgstr "Sort By"
+
+#: resources/settings.xml
+msgid "Order"
+msgstr "Order"
+
+#: resources/settings.xml
+msgid "Show Progress"
+msgstr "Show Progress"
+
+#: resources/settings.xml
+msgid "Episode Reminders"
+msgstr "Episode Reminders"
+
+#: resources/settings.xml
+msgid "Watchlist Limit"
+msgstr "Watchlist Limit"
+
+#: resources/settings.xml
+msgid "Watchlist Refresh"
+msgstr "Watchlist Refresh"
+
+#: resources/settings.xml
+msgid "Group By"
+msgstr "Group By"
+
+#: resources/settings.xml
+msgid "Sync Settings"
+msgstr "Sync Settings"
+
+#: resources/settings.xml
+msgid "Sync with Trakt.tv"
+msgstr "Sync with Trakt.tv"
+
+#: resources/settings.xml
+msgid "Sync with AniList"
+msgstr "Sync with AniList"
+
+#: resources/settings.xml
+msgid "Sync with Kitsu"
+msgstr "Sync with Kitsu"
+
+#: resources/settings.xml
+msgid "Sync with Shikimori"
+msgstr "Sync with Shikimori"
+
+#: resources/settings.xml
+msgid "Sync with AniDB"
+msgstr "Sync with AniDB"
+
+#: resources/settings.xml
+msgid "Sync Interval"
+msgstr "Sync Interval"
+
+#: resources/settings.xml
+msgid "Sync Priority"
+msgstr "Sync Priority"
+
+#: resources/settings.xml
+msgid "Sync Conflict"
+msgstr "Sync Conflict"
+
+#: resources/settings.xml
+msgid "Recommendation Settings"
+msgstr "Recommendation Settings"
+
+#: resources/settings.xml
+msgid "Recommendation Type"
+msgstr "Recommendation Type"
+
+#: resources/settings.xml
+msgid "Personalized"
+msgstr "Personalized"
+
+#: resources/settings.xml
+msgid "Trending"
+msgstr "Trending"
+
+#: resources/settings.xml
+msgid "Seasonal"
+msgstr "Seasonal"
+
+#: resources/settings.xml
+msgid "Random"
+msgstr "Random"
+
+#: resources/settings.xml
+msgid "Popular"
+msgstr "Popular"
+
+#: resources/settings.xml
+msgid "Upcoming"
+msgstr "Upcoming"
+
+#: resources/settings.xml
+msgid "Maximum Recommendations"
+msgstr "Maximum Recommendations"
+
+#: resources/settings.xml
+msgid "Include Genres"
+msgstr "Include Genres"
+
+#: resources/settings.xml
+msgid "Exclude Genres"
+msgstr "Exclude Genres"
+
+#: resources/settings.xml
+msgid "Minimum Score"
+msgstr "Minimum Score"
+
+#: resources/settings.xml
+msgid "Maximum Age"
+msgstr "Maximum Age"
+
+#: resources/settings.xml
+msgid "Recommendation Refresh"
+msgstr "Recommendation Refresh"
+
+#: resources/settings.xml
+msgid "Notification Settings"
+msgstr "Notification Settings"
+
+#: resources/settings.xml
+msgid "New Episodes"
+msgstr "New Episodes"
+
+#: resources/settings.xml
+msgid "Watchlist Updates"
+msgstr "Watchlist Updates"
+
+#: resources/settings.xml
+msgid "Recommendations"
+msgstr "Recommendations"
+
+#: resources/settings.xml
+msgid "Reminders"
+msgstr "Reminders"
+
+#: resources/settings.xml
+msgid "Notification Duration"
+msgstr "Notification Duration"
+
+#: resources/settings.xml
+msgid "Notification Sound"
+msgstr "Notification Sound"
+
+#: resources/settings.xml
+msgid "Notification Sound Path"
+msgstr "Notification Sound Path"
+
+#: resources/settings.xml
+msgid "Notification Position"
+msgstr "Notification Position"
+
+#: resources/settings.xml
+msgid "Notification Style"
+msgstr "Notification Style"
+
+#: resources/settings.xml
+msgid "Performance Settings"
+msgstr "Performance Settings"
+
+#: resources/settings.xml
+msgid "Cache Enabled"
+msgstr "Cache Enabled"
+
+#: resources/settings.xml
+msgid "Cache TTL"
+msgstr "Cache TTL"
+
+#: resources/settings.xml
+msgid "Background Refresh"
+msgstr "Background Refresh"
+
+#: resources/settings.xml
+msgid "Refresh Interval"
+msgstr "Refresh Interval"
+
+#: resources/settings.xml
+msgid "Thread Pool Size"
+msgstr "Thread Pool Size"
+
+#: resources/settings.xml
+msgid "Memory Limit"
+msgstr "Memory Limit"
+
+#: resources/settings.xml
+msgid "CPU Priority"
+msgstr "CPU Priority"
+
+#: resources/settings.xml
+msgid "Developer Settings"
+msgstr "Developer Settings"
+
+#: resources/settings.xml
+msgid "Debug Mode"
+msgstr "Debug Mode"
+
+#: resources/settings.xml
+msgid "Log Level"
+msgstr "Log Level"
+
+#: resources/settings.xml
+msgid "Error"
+msgstr "Error"
+
+#: resources/settings.xml
+msgid "Warning"
+msgstr "Warning"
+
+#: resources/settings.xml
+msgid "Info"
+msgstr "Info"
+
+#: resources/settings.xml
+msgid "Debug"
+msgstr "Debug"
+
+#: resources/settings.xml
+msgid "API Debug"
+msgstr "API Debug"
+
+#: resources/settings.xml
+msgid "Performance Debug"
+msgstr "Performance Debug"
+
+#: resources/settings.xml
+msgid "Show SQL"
+msgstr "Show SQL"
+
+#: resources/settings.xml
+msgid "Show Network"
+msgstr "Show Network"
+
+#: resources/settings.xml
+msgid "Player Settings"
+msgstr "Player Settings"
+
+#: resources/settings.xml
+msgid "Available Players"
+msgstr "Available Players"
+
+#: resources/settings.xml
+msgid "Default Player"
+msgstr "Default Player"
+
+#: resources/settings.xml
+msgid "External Player"
+msgstr "External Player"
+
+#: resources/settings.xml
+msgid "Stream Player"
+msgstr "Stream Player"
+
+#: resources/settings.xml
+msgid "Custom Player"
+msgstr "Custom Player"
+
+#: resources/settings.xml
+msgid "External Player Path"
+msgstr "External Player Path"
+
+#: resources/settings.xml
+msgid "External Player Arguments"
+msgstr "External Player Arguments"
+
+#: resources/settings.xml
+msgid "Stream Quality"
+msgstr "Stream Quality"
+
+#: resources/settings.xml
+msgid "Stream Protocol"
+msgstr "Stream Protocol"
+
+#: resources/settings.xml
+msgid "Buffer Size"
+msgstr "Buffer Size"
+
+#: resources/settings.xml
+msgid "Subtitle Language"
+msgstr "Subtitle Language"
+
+#: resources/settings.xml
+msgid "Theme Settings"
+msgstr "Theme Settings"
+
+#: resources/settings.xml
+msgid "Theme"
+msgstr "Theme"
+
+#: resources/settings.xml
+msgid "Font Size"
+msgstr "Font Size"
+
+#: resources/settings.xml
+msgid "Icon Set"
+msgstr "Icon Set"
+
+#: resources/settings.xml
+msgid "Background Image"
+msgstr "Background Image"
+
+#: resources/settings.xml
+msgid "Background Opacity"
+msgstr "Background Opacity"
+
+#: resources/settings.xml
+msgid "Widget Settings"
+msgstr "Widget Settings"
+
+#: resources/settings.xml
+msgid "Widget Enabled"
+msgstr "Widget Enabled"
+
+#: resources/settings.xml
+msgid "Widget Type"
+msgstr "Widget Type"
+
+#: resources/settings.xml
+msgid "Widget Limit"
+msgstr "Widget Limit"
+
+#: resources/settings.xml
+msgid "Widget Refresh"
+msgstr "Widget Refresh"
+
+#: resources/settings.xml
+msgid "Widget Style"
+msgstr "Widget Style"
+
+#: resources/settings.xml
+msgid "Backup Settings"
+msgstr "Backup Settings"
+
+#: resources/settings.xml
+msgid "Backup Enabled"
+msgstr "Backup Enabled"
+
+#: resources/settings.xml
+msgid "Backup Frequency"
+msgstr "Backup Frequency"
+
+#: resources/settings.xml
+msgid "Backup Location"
+msgstr "Backup Location"
+
+#: resources/settings.xml
+msgid "Backup Retention"
+msgstr "Backup Retention"
+
+#: resources/settings.xml
+msgid "Backup Encryption"
+msgstr "Backup Encryption"
+
+#: resources/settings.xml
+msgid "Analytics Settings"
+msgstr "Analytics Settings"
+
+#: resources/settings.xml
+msgid "Analytics Enabled"
+msgstr "Analytics Enabled"
+
+#: resources/settings.xml
+msgid "Analytics Type"
+msgstr "Analytics Type"
+
+#: resources/settings.xml
+msgid "Analytics Interval"
+msgstr "Analytics Interval"
+
+#: resources/settings.xml
+msgid "Analytics Anonymize"
+msgstr "Analytics Anonymize"
+
+#: resources/settings.xml
+msgid "Accessibility Settings"
+msgstr "Accessibility Settings"
+
+#: resources/settings.xml
+msgid "Screen Reader"
+msgstr "Screen Reader"
+
+#: resources/settings.xml
+msgid "Keyboard Navigation"
+msgstr "Keyboard Navigation"
+
+#: resources/settings.xml
+msgid "High Contrast"
+msgstr "High Contrast"
+
+#: resources/settings.xml
+msgid "Text to Speech"
+msgstr "Text to Speech"
+
+#: resources/settings.xml
+msgid "Closed Captions"
+msgstr "Closed Captions"
+
+#: resources/settings.xml
+msgid "Main Menu"
+msgstr "Main Menu"
+
+#: resources/settings.xml
+msgid "Watchlist"
+msgstr "Watchlist"
+
+#: resources/settings.xml
+msgid "Recommendations"
+msgstr "Recommendations"
+
+#: resources/settings.xml
+msgid "Settings"
+msgstr "Settings"
+
+#: resources/settings.xml
+msgid "Debug"
+msgstr "Debug"
+
+#: resources/settings.xml
+msgid "Play"
+msgstr "Play"
+
+#: resources/settings.xml
+msgid "Remove from Watchlist"
+msgstr "Remove from Watchlist"
+
+#: resources/settings.xml
+msgid "Mark as Watched"
+msgstr "Mark as Watched"
+
+#: resources/settings.xml
+msgid "Mark as Unwatched"
+msgstr "Mark as Unwatched"
+
+#: resources/settings.xml
+msgid "Add to Watchlist"
+msgstr "Add to Watchlist"
+
+#: resources/settings.xml
+msgid "Clear Cache"
+msgstr "Clear Cache"
+
+#: resources/settings.xml
+msgid "Show Logs"
+msgstr "Show Logs"
+
+#: resources/settings.xml
+msgid "Show API Debug"
+msgstr "Show API Debug"
+
+#: resources/settings.xml
+msgid "Show Performance Debug"
+msgstr "Show Performance Debug"
+
+#: resources/settings.xml
+msgid "Error Playing Anime"
+msgstr "Error Playing Anime"
+
+#: resources/settings.xml
+msgid "No players configured"
+msgstr "No players configured"
+
+#: resources/settings.xml
+msgid "No anime selected"
+msgstr "No anime selected"
+
+#: resources/settings.xml
+msgid "No next episode available"
+msgstr "No next episode available"
+
+#: resources/settings.xml
+msgid "Failed to launch external player"
+msgstr "Failed to launch external player"
+
+#: resources/settings.xml
+msgid "External player path not configured"
+msgstr "External player path not configured"
+
+#: resources/settings.xml
+msgid "Inputstream not supported"
+msgstr "Inputstream not supported"
+
+#: resources/settings.xml
+msgid "Custom Player"
+msgstr "Custom Player"
+
+#: resources/settings.xml
+msgid "HTTP"
+msgstr "HTTP"
+
+#: resources/settings.xml
+msgid "HTTPS"
+msgstr "HTTPS"
+
+#: resources/settings.xml
+msgid "RTMP"
+msgstr "RTMP"
+
+#: resources/settings.xml
+msgid "RTSP"
+msgstr "RTSP"
+
+#: resources/settings.xml
+msgid "Best"
+msgstr "Best"
+
+#: resources/settings.xml
+msgid "High"
+msgstr "High"
+
+#: resources/settings.xml
+msgid "Medium"
+msgstr "Medium"
+
+#: resources/settings.xml
+msgid "Low"
+msgstr "Low"
+
+#: resources/settings.xml
+msgid "Light"
+msgstr "Light"
+
+#: resources/settings.xml
+msgid "Dark"
+msgstr "Dark"
+
+#: resources/settings.xml
+msgid "System"
+msgstr "System"
+
+#: resources/settings.xml
+msgid "Title"
+msgstr "Title"
+
+#: resources/settings.xml
+msgid "Score"
+msgstr "Score"
+
+#: resources/settings.xml
+msgid "Progress"
+msgstr "Progress"
+
+#: resources/settings.xml
+msgid "Date Added"
+msgstr "Date Added"
+
+#: resources/settings.xml
+msgid "Ascending"
+msgstr "Ascending"
+
+#: resources/settings.xml
+msgid "Descending"
+msgstr "Descending"
+
+#: resources/settings.xml
+msgid "Error"
+msgstr "Error"
+
+#: resources/settings.xml
+msgid "Warning"
+msgstr "Warning"
+
+#: resources/settings.xml
+msgid "Info"
+msgstr "Info"
+
+#: resources/settings.xml
+msgid "Debug"
+msgstr "Debug"

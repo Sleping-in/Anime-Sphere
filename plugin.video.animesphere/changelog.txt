@@ -1,0 +1,33 @@
+1.0.0
+- Initial release of AnimeSphere
+- Added comprehensive watchlist management
+- Added multi-service synchronization (Trakt.tv, AniList, Kitsu, Shikimori, AniDB)
+- Added intelligent recommendation system
+- Added comprehensive notification system
+- Added performance optimizations
+- Added developer tools
+- Improved error handling and logging
+- Added caching system
+- Added multiple player support (default, external, stream, custom)
+- Added settings enhancements
+- Added API error handling
+- Added cache management
+- Added background tasks
+- Added usage analytics
+- Added theme support
+- Added widget customization
+- Added download manager
+- Added backup/restore functionality
+- Added accessibility features
+- Added analytics (optional)
+- Added usage statistics
+- Added popular content tracking
+- Added user behavior monitoring
+- Added performance metrics
+- Added error tracking
+- Added internationalization support
+
+0.1.0
+- Development version
+- Basic plugin structure
+- Initial API integration

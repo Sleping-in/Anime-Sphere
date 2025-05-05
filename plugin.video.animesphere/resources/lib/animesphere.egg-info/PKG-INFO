@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: animesphere
+Version: 0.0.1
+Summary: Kodi plugin for MyAnimeList integration
+Requires-Dist: requests>=2.25.1
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: six>=1.16.0
+Dynamic: requires-dist
+Dynamic: summary

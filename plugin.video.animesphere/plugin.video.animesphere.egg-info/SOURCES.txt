@@ -1,0 +1,7 @@
+README.md
+setup.py
+plugin.video.animesphere.egg-info/PKG-INFO
+plugin.video.animesphere.egg-info/SOURCES.txt
+plugin.video.animesphere.egg-info/dependency_links.txt
+plugin.video.animesphere.egg-info/requires.txt
+plugin.video.animesphere.egg-info/top_level.txt

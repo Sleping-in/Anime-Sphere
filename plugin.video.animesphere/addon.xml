@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.animesphere" name="AnimeSphere" version="1.0.0" provider-name="Windsurf">
+    <requires>
+        <import addon="xbmc.python" version="0.0.1"/>
+        <import addon="script.module.requests" version="0.0.1"/>
+        <import addon="script.module.dateutil" version="0.0.1"/>
+        <import addon="script.module.six" version="0.0.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">AnimeSphere - Advanced Anime Management</summary>
+        <description lang="en">A comprehensive Kodi plugin for anime management and streaming</description>
+        <disclaimer lang="en">This plugin requires valid MyAnimeList API credentials</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <license>GPL</license>
+        <forum>https://github.com/windsurf/plugin.video.animesphere</forum>
+        <website>https://github.com/windsurf/plugin.video.animesphere</website>
+        <email>support@windsurf.com</email>
+        <source>https://github.com/windsurf/plugin.video.animesphere</source>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <banner>resources/media/banner.jpg</banner>
+            <clearlogo>resources/media/clearlogo.png</clearlogo>
+        </assets>
+    </extension>
+    <extension point="xbmc.addon.settings">
+        <settings>
+            <category label="MyAnimeList Settings">
+                <setting id="client_id" type="text" label="Client ID" default="" visible="true"/>
+                <setting id="client_secret" type="text" label="Client Secret" default="" visible="true"/>
+                <setting id="mal_access_token" type="text" label="Access Token" default="" visible="false"/>
+                <setting id="mal_refresh_token" type="text" label="Refresh Token" default="" visible="false"/>
+                <setting id="mal_token_expires" type="number" label="Token Expiry" default="0" visible="false"/>
+            </category>
+        </settings>
+    </extension>
+</addon>
